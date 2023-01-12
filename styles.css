@@ -1,0 +1,52 @@
+.title {
+    display:flex;
+    justify-content: center;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);  
+    gap: 20px;
+}
+
+.cards {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    height: 200px;
+    width: 140px;
+    border:2px;
+    border-radius:2px;
+
+
+
+}
+
+
+
+.cards.one,
+.cards.ten{
+    background-color: red;
+}
+
+.cards.two,
+.cards.five{
+    background-color: green;
+}
+
+.cards.three,
+.cards.six{
+    background-color: black;
+}
+
+.cards.four,
+.cards.seven{
+    background-color: orange;
+}
+
+.cards.eight,
+.cards.nine{
+    background-color: blue;
+}
