@@ -19,7 +19,7 @@ function pickFirstCard() {
 
 function cardEvent() {
   firstCard = !firstCard;
-  pickedCard = this.innerText;
+  pickedCard = this.textContent;
   console.log(`my card is ${pickedCard}`);
   arr.push(pickedCard);
   countedArr.push(pickedCard)
