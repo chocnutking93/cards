@@ -1,11 +1,11 @@
 const cards = document.querySelectorAll(".cards");
-
 const cardsArray = Array.from(cards);
-
+const notice = document.querySelector(".notice");
 
 let firstCard = false;
 let pickedCard;
 let arr = [];
+const countedArr = [];
 
 cardsArray.forEach((card) => {
   card.addEventListener("click", cardEvent);
@@ -22,19 +22,20 @@ function cardEvent() {
   pickedCard = this.innerText;
   console.log(`my card is ${pickedCard}`);
   arr.push(pickedCard);
+  countedArr.push(pickedCard)
+
   if (arr.length === 2) {
-    console.log(arr);
     checkMatch();
   }
 }
 
 function checkMatch() {
   if (arr[0] === arr[1]) {
-    console.log("you found a match");
+    notice.innerText = "You found a match!";
     arr = [];
-    console.log(arr);
   } else {
-    console.log("try again");
+    notice.innerText = "Try again";
+
     arr = [];
   }
 }
