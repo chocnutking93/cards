@@ -1,3 +1,9 @@
+*{
+    padding:0;
+    /* margin:0; */
+    box-sizing: border-box;
+}
+
 .title {
     display:flex;
     justify-content: center;
@@ -5,7 +11,9 @@
 
 .card-container{
     display:grid;
-    grid-template-columns: repeat(5,1fr);  
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:  repeat(5,1fr);  
     gap: 20px;
 }
 
@@ -13,40 +21,49 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     font-size: 40px;
     height: 200px;
     width: 140px;
-    border:2px;
+    border:2px solid black;
     border-radius:2px;
-
-
-
+    transform:scale(1);
 }
 
+.cards:active{
+    transform:scale(.97);
+    transition: transform .2s;
+}
 
+.front {
+    visibility:hidden;
+}
 
-.cards.one,
-.cards.ten{
+/* .cards.one{
     background-color: red;
 }
 
-.cards.two,
-.cards.five{
+
+.cards.two {
     background-color: green;
 }
 
-.cards.three,
-.cards.six{
-    background-color: black;
+.cards.three {
+    background-color: rgb(6, 6, 6);
 }
 
-.cards.four,
-.cards.seven{
+.cards.four{
     background-color: orange;
 }
 
-.cards.eight,
-.cards.nine{
+.cards.five {
     background-color: blue;
+} */
+
+
+.notice {
+    display:flex;
+    justify-content: center;
+    margin-top: 40px;
 }
+
