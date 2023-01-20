@@ -18,12 +18,10 @@ cards.forEach(card => {
 })
 
 
-// cardsArray.forEach((card) =>  {
-//   card.addEventListener("click", () => {
-//     flipCard();
-//     cardEvent();
-//   });
-// });
+cardsArray.forEach(card => {
+  card.addEventListener('click', cardEvent)
+})
+
 
 function pickFirstCard() {
   cardsArray.forEach((card) => {
