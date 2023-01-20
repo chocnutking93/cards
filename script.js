@@ -1,19 +1,33 @@
+
+
 const cards = document.querySelectorAll(".cards");
 const cardsArray = Array.from(cards);
 const notice = document.querySelector(".notice");
+const front = document.querySelectorAll('.front');
+const back = document.querySelectorAll('.back');
+const button = document.querySelector('.btn');
+
 
 let firstCard = false;
 let pickedCard;
 let arr = [];
 const countedArr = [];
 
-cardsArray.forEach((card) => {
-  card.addEventListener("click", cardEvent);
-});
+cards.forEach(card => {
+  card.addEventListener('click',flipCard)
+})
+
+
+// cardsArray.forEach((card) =>  {
+//   card.addEventListener("click", () => {
+//     flipCard();
+//     cardEvent();
+//   });
+// });
 
 function pickFirstCard() {
   cardsArray.forEach((card) => {
-    card.addEventListener("click", cardEvent);
+    card.addEventListener("click", flipCard);
   });
 }
 
@@ -39,3 +53,10 @@ function checkMatch() {
     arr = [];
   }
 }
+
+function flipCard () {
+  console.log(this)
+
+  this.classList.toggle('flipped');
+}
+
