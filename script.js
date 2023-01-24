@@ -5,6 +5,9 @@ const front = document.querySelectorAll(".front");
 const back = document.querySelectorAll(".back");
 const button = document.querySelector(".btn");
 const cardContainer = document.querySelectorAll('.card-container');
+const resetButton = document.querySelector('.reset')
+
+resetButton.style.display = 'none'
 
 let cardsWon = 0;
 let firstCard = false;
@@ -83,6 +86,7 @@ function disableCards() {
 function checkFinish() {
   if (cardsWon === 5) {
     notice.innerText = "Congratulations, you beat the game!";
+    resetButton.style.display='block'
   }
 }
 
@@ -95,7 +99,11 @@ function randomizeCards () {
 
 function resetCards () {
   window.location.reload(true)
-}
+} 
+
+
+
+resetButton.addEventListener('click', resetCards)
 
 cards.forEach((card) => {
   card.addEventListener("click", flipCard);
