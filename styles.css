@@ -9,6 +9,15 @@
   justify-content: center;
 }
 
+.front > img {
+  margin-top: 10px;
+  height: 200px;
+  width: 140px;
+  border-radius: 2px;
+  border: 2px solid black;
+}
+
+
 .back > img {
   margin-top: 10px;
   height: 200px;
@@ -88,4 +97,14 @@
 
 .cards.flipped{
     transform: rotateY(180deg)
+}
+
+.reset{
+  display:flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+img{
+
 }
