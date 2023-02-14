@@ -101,7 +101,13 @@
 
 .reset{
   display:flex;
+  align-self: center;
   justify-content: center;
   align-items: center; 
 }
 
+.btn-container{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
